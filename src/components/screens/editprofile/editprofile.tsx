@@ -32,7 +32,7 @@ type ProfileEditNavigationProp = NativeStackNavigationProp<
   'ProfileEdit'
 >;
 
-const DEFAULT_AVATAR = require('../../../../assets/images/avatar-placeholder.png');
+const DEFAULT_AVATAR = require('../../../../assets/images/logo.png');
 
 export const ProfileEditScreen: React.FC = () => {
   const navigation = useNavigation<ProfileEditNavigationProp>();

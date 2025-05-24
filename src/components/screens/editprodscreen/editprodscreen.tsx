@@ -11,6 +11,14 @@ import {
   Platform,
   PermissionsAndroid,
 } from 'react-native';
+
+
+
+
+
+
+
+
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { useForm, Controller } from 'react-hook-form';
 import { z } from 'zod';
@@ -53,6 +61,10 @@ export const EditProductScreen = () => {
     longitudeDelta: 0.01,
   });
   const [locationInput, setLocationInput] = useState('');
+
+
+
+
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -158,16 +170,25 @@ export const EditProductScreen = () => {
         } else {
           formData.append('images', {
             uri: img.uri,
-            name: img.name,
+            name: 
+            img.name,
             type: img.type,
-          } as any);
+          
+          
+          
+          }
+          
+          as any);
         }
       });
 
       await API.put(`/api/products/${params.productId}`, formData, {
         headers: {
-          Authorization: `Bearer ${accessToken}`,
-          'Content-Type': 'multipart/form-data',
+          Authorization:
+           `Bearer ${accessToken}`,
+          
+           'Content-Type': 
+           'multipart/form-data',
         },
       });
 

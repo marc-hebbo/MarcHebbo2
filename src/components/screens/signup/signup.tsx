@@ -31,6 +31,8 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useAuthStore } from '../../../stores/authStore';
 import API from '../../../services/axios';
 
+const DEFAULT_AVATAR = require('../../../../assets/images/logo.png');
+
 type RootStackParamList = {
   Login: undefined;
   SignUp: { email: string };
@@ -320,12 +322,10 @@ export const SignupScreen: React.FC = () => {
                   </Text>
                 </TouchableOpacity>
 
-                {image && (
-                  <Image
-                    source={{ uri: image.uri }}
-                    style={{ width: 100, height: 100, borderRadius: 50, alignSelf: 'center', marginBottom: 12 }}
-                  />
-                )}
+                <Image
+                  source={image?.uri ? { uri: image.uri } : DEFAULT_AVATAR}
+                  style={{ width: 100, height: 100, borderRadius: 50, alignSelf: 'center', marginBottom: 12 }}
+                />
 
                 <Animatable.View animation="fadeInUp" delay={600} duration={600} style={styles.buttonContainer}>
                   <Button
