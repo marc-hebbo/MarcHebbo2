@@ -37,8 +37,7 @@ A React Native app that allows users to authenticate and manage product listings
 
 - React Native  
 - TypeScript  
-- Zustand  
-- Supabase  
+- Zustand   
 - React Navigation  
 - React Native Maps  
 - React Native Image Picker  
