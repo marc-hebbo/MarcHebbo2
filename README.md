@@ -2,7 +2,7 @@
 
 A React Native app that allows users to authenticate and manage product listings. Includes features like login, signup, verification, product CRUD, image uploads, location selection, and more.
 
-##  Features
+## Features
 
 *  **User Authentication**: Login, Signup, Email Verification
 *  **Product Listing**: Pagination, Search, and Price Sorting
@@ -13,15 +13,39 @@ A React Native app that allows users to authenticate and manage product listings
 *  **Image Swiper**: Swipe through images with long-press to save
 *  **Product Detail Screen**: Displays location on map and contact info
 
-## ⚠️ Known Issues
+## Getting Started
 
-Sometimes when submitting a form (e.g., login, signup, add product), it may not respond immediately or fail with a backend error like HTTP 521.
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/your-repo.git
+   cd your-repo
+   ```
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Run on iOS:
+   ```
+   npx react-native run-ios
+   ```
+4. Run on Android:
+   ```
+   npx react-native run-android
+   ```
 
-**Possible Causes**:
+## Tech Stack
 
-* Network instability
-* Temporary backend downtime
+- React Native  
+- TypeScript  
+- Zustand  
+- Supabase  
+- React Navigation  
+- React Native Maps  
+- React Native Image Picker  
 
-**Solution**:
+## Project Structure
 
-> If you face this issue, simply try pressing the Submit button again after a moment. This is not a bug in the app — retrying generally resolves the issue.
+- `src/components` - Reusable UI components  
+- `src/screens` - Application screens and views  
+- `src/services` - API and backend service integrations  
+- `src/stores` - Zustand state management stores
